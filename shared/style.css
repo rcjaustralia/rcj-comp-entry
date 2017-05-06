@@ -1,0 +1,114 @@
+html *
+{
+   color: #666666;
+   font-family: Verdana, Geneva, sans-serif;
+   line-height: 180%;
+   font-size: 97%;
+}
+
+h1{
+    font-size: 1.200em;
+  }
+  
+h2{
+    font-size: 1.100em;
+  }
+
+h2{
+    font-size: 1.000em;
+  }
+
+p.indent{
+    margin-left: 30px;
+  }  
+
+p.indentsmall{
+    margin-left: 30px;
+    font-size: 0.850em;
+  }  
+  
+legend{
+    font-size: 1.000em;
+  }
+
+fieldset {
+    width: 530px;
+    margin-left: 30px;
+}
+
+
+textarea {
+    resize: none;
+}
+
+.field_label{
+  text-align: left;
+  font-weight: bold;
+}
+
+.textbox {
+  width: 300px;
+  margin-right: 10px;
+  float:right;
+  height: 26px;
+}
+
+.field_message{
+  text-align: left;
+  width: 300px; 
+  display: block; 
+  margin-left: 215px;
+  font-size: 0.800em;
+  color: red;
+  padding-bottom: 0px;
+}
+
+fieldset p{
+  padding: 2px;
+  }
+
+table {
+    border-collapse: collapse;
+    margin-left: 30px;
+}
+
+table, td, th {
+    border: 1px solid #3d3d3d;
+} 
+
+td , th{
+    padding: 3px 15px 2px 15px;
+}
+
+th {
+    background-color: #474747;
+    color: #ffffff;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #e0e0e0;
+}
+
+table tr:nth-child(even) td{
+    background-color: #ffffff;
+}
+
+a:link {
+    color: #666666;
+}
+
+a:visited {
+    color: #7c0000;
+}
+
+a:hover {
+    color: #df0000;
+}
+
+a:active {
+    color: #df0000;
+}
+
+span.action{
+    font-size: 0.75em;
+}

@@ -1,0 +1,29 @@
+* Name and address of venue *
+
+University of Melbourne Parkville (<a href="https://www.google.com.au/maps/place/University+of+Melbourne/@-37.7963689,144.9611738,15z/data=!4m2!3m1!1s0x0:0xeacb63e2b725ff6d?sa=X&ved=0ahUKEwjutaitvL7TAhXGj5QKHTwaAjUQ_BIIiwEwEw" target="_blank">map</a>)
+
+* Message on entry page *
+
+Where there are insufficient entries for any division, that division will be run as a workshop or merged with another division.<br><br>
+All competitors MUST sign a <a href="http://www.robocupjunior.org.au/sites/default/files/RCJA_Media_Release_Deed_0.pdf">Media Release Deed</a> and submit it at Registration on the day.<br><br>
+Each Soccer team must supply a referee.<br><br>
+Each School entering Rescue teams must provide a volunteer.<br><br>
+Rescue will be run under the Victorian rules <a href="http://www.robocupjunior.org.au/vic/rescue">here</a>.
+
+* Invoice Message *
+
+RoboCupJunior Australia is a non profit organisation so no GST applies.<br><br>
+Payment must be made by EFT to:<br><br>
+<strong>Account Name: </strong>RoboCupJunior Australia Inc. (Victoria)<br>
+<strong>BSB: </strong>063834<br>
+<strong>Account Number: </strong>10177846<br>
+<strong>Reference: </strong>[INVOICE_REF]<br><br>
+Please email payment confirmation to <a href="b.thomas@ccg.vic.edu.au">b.thomas@ccg.vic.edu.au</a> and
+quote reference [INVOICE_REF].<br><br>
+Payment must be received by [ENTRY_CLOSING_DATE] for your entry to be accepted.<br>
+
+* Address for payment communication * 
+
+Brian Thomas<br>
+117 Clifton Springs Rd<br>
+Drysdale  VIC  3222

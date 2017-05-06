@@ -1,0 +1,101 @@
+23 March 2017
+  Deployment to new host
+    - Move code to GitHub with auto-deployment
+    - Modify log system to wall the directory tree looking for, aggregating and deleting error_log files
+    - Confirm email password is working
+
+  Functionality
+    
+    - User check boxes x 3
+      - Modal page to show info about each of the check boxes above;
+      - Contents of these messages to be external to php page for simple editing;
+    
+    - Team member 'school year level', 'gender'
+      - Add gender and year at school to view_team_member
+      - Reports on gender and year at school
+      - Dev access to student to edit gender and year at school
+      
+    - Data driven custom message in invoices;
+      - Add invoice_address field to db
+      - Add invoice_message field to db
+      - UI to edit invoice_address and invoice_message fields, with default values
+      - Extract invoice_address and invoice_message fields and insert into invoice.      
+      
+  
+  Usability
+    - Remember my last login
+    - Return to last record when inserting teams
+    - Add New | Back | Home at both the top and bottom of each data grid
+    - Mentor screen - return the browser to the last edited row  when a mentor is entering teams
+    - Mentor screen - bulk upload
+  
+  Framework
+    - Implement Template Method
+    - Audit for handling of <script> inserted into data fields
+    - Something to prevent robots logging in
+    - Check for cookie and javascript before logging on
+    - HTTPS
+
+Nice to have
+    - Email Execs for list of state chairs and state treasurers
+
+    - Send an email to a group of recipients. mmm, manage bounces, 
+      subscription confirmation, etc. Is there an API into Mail Chimp?
+      (https://developer.mailchimp.com/)
+      - Role within RCJA
+    - Enrol in mentor in a workshop
+    - Online media releases  
+
+    
+June 2016
+             
+  *  Housekeeping tasks	   
+    - Change hashing of password
+    - How to videos
+   
+Query fragments
+
+  * List mentor email addresses by comp division
+
+  select distinct email 
+  from 
+    team t,
+    mentor_team mt,
+    user u,
+    comp_division cd
+  where
+    mt.uid = t.uid_mentor_team
+  and u.uid = mt.uid_user
+  and cd.uid = t.uid_comp_division
+  and upper(cd.div_name) like '%RESCUE%' 
+
+  * List Rescue division entry count
+  select div_name, count(*) from v_team where div_name like '%Rescue%' group by div_name [where year = '2016']
+
+  * Distribution of team sizes
+
+  select 
+    year,
+    state,
+    div_name,
+    team_size,
+    count(*)
+  from
+    (select
+       year,
+       state,
+       div_name,
+       team_name,
+       count(*) as team_size
+     from
+       v_team_member
+     where
+       div_name like '%Rescue%'
+     group by
+       uid_team) as t
+  group by
+    year,
+    state,
+    div_name,
+    team_size
+
