@@ -1,0 +1,22 @@
+{
+    "id": "/rcj-comp-entry",
+    "instances": 1,
+    "image": "rcjaustralia/rcj-comp-entry:latest",
+    "network": [
+        {
+            "containerPort": 5000,
+            "hostPort": 0,
+            "publicHostnames": [
+                "register.rcj.org.au"
+            ]
+        }
+    ],
+    "env": {
+        "MYSQL_DB_HOST": "$MYSQL_DB_HOST",
+        "MYSQL_DB_USER": "$MYSQL_DB_USER",
+        "MYSQL_DB_PASS": "$MYSQL_DB_PASS",
+        "ENV_TYPE": "$ENV_TYPE",
+        "MYSQL_DB_NAME": "rcj_registration"
+    },
+    "export": []
+}
