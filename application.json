@@ -12,11 +12,12 @@
         }
     ],
     "env": {
-        "MYSQL_DB_HOST": "$MYSQL_DB_HOST",
+        "MYSQL_DB_HOST": "localhost",
         "MYSQL_DB_USER": "$MYSQL_DB_USER",
         "MYSQL_DB_PASS": "$MYSQL_DB_PASS",
         "ENV_TYPE": "$ENV_TYPE",
         "MYSQL_DB_NAME": "rcj_registration"
     },
+    "volumes": {},
     "export": []
 }
