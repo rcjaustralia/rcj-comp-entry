@@ -6,9 +6,9 @@
       exit(); //==>>
   }
 
-  $logFileName = $_SERVER["DOCUMENT_ROOT"] . '/log/error.log';
-  if (file_exists($logFileName)){
-    unlink($logFileName);
+  $fileName = postFieldDefault('fileName');
+  if (!empty($fileName) and file_exists($fileName)){
+    unlink($fileName);
   }
   header("location: /log");
 ?>
