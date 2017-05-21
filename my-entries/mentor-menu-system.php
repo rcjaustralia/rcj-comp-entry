@@ -87,7 +87,6 @@ function WriteMentorCompetitionIndex($con)
             <th>Event Date</th>
             <th>Open Until</th>
             <th>My entries and invoice</th>
-            <th>Action</th>
         </tr>";
 
   foreach($con->query($sql) as $row)
@@ -102,37 +101,24 @@ function WriteMentorCompetitionIndex($con)
     echo "</td>";
     echo "<td>" . $row['event_date'] . "</td>";
     echo "<td>" . $row['open_until'] . "</td>";
+    echo '<td align="center">';
     if ($row['count'] > 0)
     {
-      echo '<td>';
       if ($row['active']){
         echo '<a href="javascript:editMyEntries(\'' . $row["uid_comp_name"] . '\')">' . viewEditEntryText('Edit', $row['count']) . '</a> | ';
+        echo '<a href="javascript:CEPostDelete(\'' . $row["uid_comp_name"] . '\', \'/my-entries/delete-comp.php\')">Delete</a> | ';
       } else {
         echo '<a href="javascript:viewMyEntries(\'' . $row["uid_comp_name"] . '\')">' . viewEditEntryText('View', $row['count']) . '</a> | ';        
       }
       echo invoiceURL($_SESSION['uid_logged_on_user'], $row["uid_comp_name"]); 
-      echo '</td>';
+
     }
     else
     {
-      echo "<td>&nbsp;</td>";
+      echo '<a href="javascript:editMyEntries(\'' . $row["uid_comp_name"] . '\')">Enter</a>';
     } 
-    
-    echo '<td><small>';
-    if ($row['active'])
-    {
-      if ($row['count'] > 0)
-      {
-        echo '<a href="javascript:CEPostEdit(\'' . $row["uid_comp_name"] . '\', \'/my-entries/edit-comp.php\')">Edit</a> | ';
-        echo '<a href="javascript:CEPostDelete(\'' . $row["uid_comp_name"] . '\', \'/my-entries/delete-comp.php\')">Delete</a>';
-      }
-      else
-      {
-          echo '<a href="javascript:editMyEntries(\'' . $row["uid_comp_name"] . '\')">Enter</a>';
-      }
-    }
-    echo '</small></td>';
-    echo "</tr>";    
+      echo '</td>';
+      echo "</tr>";    
   }
 
   echo "</table>"; 
