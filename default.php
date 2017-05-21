@@ -46,7 +46,7 @@
         echo '<h2>System Administrator Actions</h2>
               <p class="indent"><a href="/sys-admin/user/">Manage users</a></p>
               <p class="indent"><a href="/sys-admin/backup/">Backup and restore database</a></p>
-              <p class="indent"><a href="/log/">View system logs</a></p>';
+              <p class="indent"><a href="/sys-admin/log/">View system logs</a></p>';
               
       }
       
