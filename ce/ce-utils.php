@@ -39,34 +39,6 @@ function ceLog($message){
   error_log($message, 0);
 }
 
-function CEHandleException($e, $back = '')
-{
-  error_log($e->getMessage(), 0);
-  error_log($e->getMessage(), 1, 'peter.w.hinrichsen@gmail.com');
-  echo '<html>';
-  echo '<body>';
-  echo '<p><b>Error on server:</b></p>';
-    
-  if (C_DEBUG == 'TRUE'){
-    echo '<pre>' . $e->getMessage() . '</pre>';
-  }
-  echo '<p>';
-  if ($back != ''){
-    echo '<a href="' . $back . '">Back</a> | ';
-  }
-  echo '<a href="\">Home</a></p>';
-  echo '</body>';
-  echo '</html>';
-
-}
-
-function ceDefaultExceptionHandler($e)
-{
-  CEHandleException($e);
-}
-
-// set_exception_handler('ceDefaultExceptionHandler');
-
 function CECheckNotNull($value, &$return_message, $message)
 {
   if (empty($value))

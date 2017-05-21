@@ -5,8 +5,8 @@ function echoLog($fileName){
     
   echo "<h2 style='margin-left:30px'>$fileName</h2>";    
   echo '<p style="margin-left:30px"><a href="/">Home</a> | ' . 
-       '<a href="/log">Refresh</a> | ' . 
-       '<a href="javascript:cePost(\'/log/delete.php\', {fileName: \'' . $fileName . '\'})">Delete</a></p>';
+       '<a href="/sys-admin/log">Refresh</a> | ' . 
+       '<a href="javascript:cePost(\'/sys-admin/log/delete.php\', {fileName: \'' . $fileName . '\'})">Delete</a></p>';
   echo '<pre style="margin-left:60px">';
   echo file_get_contents($fileName);
   echo '</pre>';

@@ -35,6 +35,13 @@
     define("C_MYSQL",        "/usr/bin/mysql");
     define("C_MYSQLDUMP",    "/usr/bin/mysqldump");
     define("C_DEBUG",        "TRUE");
+  } else if ($httpHost == 'enter.rcjonline.org.au'){
+    define("C_DB_NAME",      "rcjonlin_enter");
+    define("C_DB_USER_NAME", "rcjonlin_enter");
+    define("C_DB_PASSWORD",  "T^mvQKRb8_z9J=Hr=x");    
+    define("C_MYSQL",        "mysql");
+    define("C_MYSQLDUMP",    "mysqldump");
+    define("C_DEBUG",        "FALSE");
   } else {
     throw new Exception('Unknown HTTP Host: "' . $httpHost . '"'); 
   }

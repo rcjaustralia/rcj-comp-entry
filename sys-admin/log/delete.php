@@ -10,5 +10,5 @@
   if (!empty($fileName) and file_exists($fileName)){
     unlink($fileName);
   }
-  header("location: /log");
+  header("location: /sys-admin/log");
 ?>
