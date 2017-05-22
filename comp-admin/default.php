@@ -114,7 +114,6 @@
 	'from                 ' .
 	'  v_comp_division    ' .
 	'where                ' .
-//	'  end_date >= CURDATE() + INTERVAL 30 DAY  ' .
     ' year = (select year(now) from v_local_time) ' .
 	'order by             ' .
 	'  end_date ASC       ';
