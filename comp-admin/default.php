@@ -100,7 +100,7 @@
   
   $sql = 
     'select               ' . 
-	  '  uid_year,          ' .
+    '  uid_year,          ' .
   	'  uid_comp_division, ' .
     '  uid_comp_name,     ' .
     '  uid_state,         ' .
@@ -114,7 +114,8 @@
 	'from                 ' .
 	'  v_comp_division    ' .
 	'where                ' .
-	'  end_date >= CURDATE() + INTERVAL 30 DAY  ' .
+//	'  end_date >= CURDATE() + INTERVAL 30 DAY  ' .
+    ' year = (select year(now) from v_local_time) ' .
 	'order by             ' .
 	'  end_date ASC       ';
 	
