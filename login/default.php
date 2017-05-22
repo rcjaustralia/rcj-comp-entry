@@ -226,6 +226,7 @@
              $last_name,
              $organisation)
   {
+    $passwordHash = sha1($password);  
     $query = $con->prepare(
       'insert into user ' .
       '(uid, email, password_hash, first_name, last_name, primary_org, access_level, rcja_member, mailing_list, share_with_sponsor) ' .
@@ -233,7 +234,7 @@
       '(:uid, :email, :password_hash, :first_name, :last_name, :primary_org, "' . C_MENTOR . '", 0, 0, 0)');      
     $query->bindParam(':uid',           $uid);
     $query->bindParam(':email',         $email);
-    $query->bindParam(':password_hash', sha1($password));
+    $query->bindParam(':password_hash', $passwordHash);
     $query->bindParam(':first_name',    $first_name);
     $query->bindParam(':last_name',     $last_name);
     $query->bindParam(':primary_org',   $organisation);
